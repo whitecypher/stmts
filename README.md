@@ -3,7 +3,7 @@ This is a utility package to create a concurrency safe collection of sqlx named 
 
 # Usage
 
-```golang
+```go
 import (
   "fmt"
   "database/sql"
@@ -47,14 +47,14 @@ func main() {
   
   // retrieve and execute a query
   var row struct {
-		ID   uint64 `db:"id"`
-		Name string `db:"name"`
-	}
+    ID   uint64 `db:"id"`
+    Name string `db:"name"`
+  }
   err := named.Stmt(qGetSomething).Get(&row, struct {
-		ID uint64 `db:"id"`
-	}{
-		ID: 1,
-	})
+    ID uint64 `db:"id"`
+  }{
+    ID: 1,
+  })
   if err != nil && err != sql.ErrNoRows {
     // TODO: handle the error however you like
   }
