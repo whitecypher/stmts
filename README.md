@@ -4,6 +4,8 @@ This is a utility package to create a concurrency safe collection of sqlx named 
 # Usage
 
 ```go
+package main
+
 import (
   "fmt"
   "database/sql"
