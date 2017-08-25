@@ -2,7 +2,9 @@
 
 This is a utility package to create a concurrency safe collection of sqlx named statements that can be consumed in 3 stages. Registration, preparation, and execution. 
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/whitecypher/stmts)](https://goreportcard.com/report/github.com/whitecypher/stmts)
+[![Go Report Card](https://goreportcard.com/badge/github.com/whitecypher/stmts)](https://goreportcard.com/report/github.com/whitecypher/stmts) 
+[![Go Doc](https://img.shields.io/badge/reference-go%20doc-blue.svg)](https://godoc.org/github.com/whitecypher/stmts)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
 ## how to
 
