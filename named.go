@@ -42,7 +42,7 @@ func (n *Named) Add(queries ...string) {
 }
 
 // Prepare all the queries in the map
-func (n Named) Prepare(db *sqlx.DB) error {
+func (n *Named) Prepare(db *sqlx.DB) error {
 	if n.statements == nil {
 		return fmt.Errorf("No statements to prepare")
 	}
@@ -59,7 +59,7 @@ func (n Named) Prepare(db *sqlx.DB) error {
 }
 
 // MustPrepare prepares all the queries in the map and triggers the provided logf function if something goes wrong
-func (n Named) MustPrepare(db *sqlx.DB, logf Logf) {
+func (n *Named) MustPrepare(db *sqlx.DB, logf Logf) {
 	err := n.Prepare(db)
 	if err != nil {
 		logf("Unable to prepare statement with error: %v", err)
@@ -67,7 +67,7 @@ func (n Named) MustPrepare(db *sqlx.DB, logf Logf) {
 }
 
 // Stmt gets a prepared *sqlx.NamedStmt by query
-func (n Named) Stmt(query string) *sqlx.NamedStmt {
+func (n *Named) Stmt(query string) *sqlx.NamedStmt {
 	if n.statements == nil {
 		return nil
 	}
