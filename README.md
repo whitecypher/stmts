@@ -1,5 +1,8 @@
-# stmts
+# stmts 
+
 This is a utility package to create a concurrency safe collection of sqlx named statements that can be consumed in 3 stages. Registration, preparation, and execution. 
+
+[![Go Report Card](https://goreportcard.com/badge/github.com/whitecypher/stmts)](https://goreportcard.com/report/github.com/whitecypher/stmts)
 
 ## how to
 
